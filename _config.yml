@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : "Emre Özcan"
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Location"
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "mrzcn"
   google_plus      :
   keybase          :
   instagram        :
@@ -114,7 +114,7 @@ author:
   weibo            :
   xing             :
   youtube          :
-  wikipedia        : "https://tr.wikipedia.org/wiki/Kullan%C4%B1c%C4%B1:Eo84"
+  wikipedia        : "Eo84"
 
 
 # Reading Files
@@ -255,7 +255,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Turkey # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
