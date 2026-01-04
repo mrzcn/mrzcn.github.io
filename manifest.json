@@ -1,0 +1,16 @@
+{
+  "name": "Emre Özcan",
+  "short_name": "EmreOzcan",
+  "description": "Emre Özcan Personal Portfolio & Blog",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "images/profile.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
