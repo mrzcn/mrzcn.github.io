@@ -69,20 +69,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem var(--spacing-lg);
-  /* Increased vertical padding */
+  padding: 0;
   overflow: hidden;
+  /* Ensure centering logic works without offsets */
   transition: background-color var(--transition-normal), color var(--transition-normal);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* === App Container === */
 .app-container {
   display: flex;
-  width: 100%;
+  width: 95%;
   max-width: 1200px;
-  height: calc(100vh - 4rem);
+  height: 90vh;
   gap: var(--spacing-lg);
   align-items: stretch;
+  margin: auto;
+  /* Extra insurance for centering */
 }
 
 /* === Typography === */
@@ -141,7 +151,7 @@ a:hover {
 }
 
 .sidebar-content {
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: 1.5rem var(--spacing-lg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,18 +175,18 @@ a:hover {
   object-fit: cover;
 }
 
-/* === Profile Info === */
 .profile-name {
-  color: var(--bg-white);
+  color: #ffffff !important;
   font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);
   text-align: center;
+  display: block;
 }
 
 .profile-title {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -192,17 +202,18 @@ a:hover {
 }
 
 .sidebar-nav li {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 0.15rem;
 }
 
 .sidebar-nav ul li a {
   display: block;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 0.4rem 0.75rem;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   border-radius: 0.5rem;
   transition: all var(--transition-fast);
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .sidebar-nav ul li a:hover,
@@ -240,12 +251,22 @@ a:hover {
   color: #ffffff;
 }
 
-/* === Sidebar Social Links === */
+/* === Sidebar Social === */
+.social-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  /* Lighter text for title */
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
 .sidebar-social {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-lg);
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-xs);
   width: 100%;
 }
 
@@ -253,18 +274,51 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  /* Smaller size */
+  height: 32px;
+  /* Smaller size */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   color: rgba(255, 255, 255, 0.8);
   transition: var(--transition-fast);
+  position: relative;
+  /* For tooltip */
 }
 
 .sidebar-social a:hover {
   background-color: var(--primary-color);
   color: var(--bg-white);
   transform: translateY(-2px);
+}
+
+.sidebar-social a svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Tooltip */
+.sidebar-social a::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  background-color: #222;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.sidebar-social a:hover::after {
+  opacity: 1;
 }
 
 /* === Main Content === */
@@ -290,6 +344,27 @@ a:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* === Mobile Optimizations === */
+@media (max-width: 768px) {
+  .sidebar-nav ul li a {
+    min-height: 44px;
+    /* Touch friendly */
+    display: flex;
+    align-items: center;
+  }
+
+  .control-btn {
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .sidebar-social a {
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -433,4 +508,50 @@ a:hover {
 
 .mb-4 {
   margin-bottom: var(--spacing-xl);
+}
+
+/* === Services Page === */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-color: var(--primary-color);
+}
+
+.service-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.5;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  border-radius: 12px;
 }

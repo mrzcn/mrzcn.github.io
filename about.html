@@ -16,10 +16,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hakkımda - Emre Özcan">
+    <meta property="og:description"
+        content="Emre Özcan hakkında - Nolto Teknoloji kurucusu, bilişim ve telekomünikasyon uzmanı.">
+    <meta property="og:image" content="https://mrzcn.github.io/profile.png">
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="style.css?v=1.4">
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="assets/lucide.min.js"></script>
 </head>
 
 <body>
@@ -28,9 +37,8 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-content">
-                <!-- Profile Photo -->
                 <div class="profile-photo">
-                    <img src="profile.png" alt="Emre Özcan">
+                    <img src="profile.png" alt="Emre Özcan" loading="eager">
                 </div>
 
                 <!-- Name -->
@@ -40,12 +48,19 @@
                 <!-- Navigation Menu -->
                 <nav class="sidebar-nav">
                     <ul>
-                        <li><a href="index.html" data-i18n="nav-home">Ana Sayfa</a></li>
-                        <li><a href="about.html" class="active" data-i18n="nav-about">Yolculuğum</a></li>
-                        <li><a href="#" data-i18n="nav-solutions">Çözümler & Markalar</a></li>
-                        <li><a href="#" data-i18n="nav-media">Yazılar & Medya</a></li>
+                        <li><a href="index.html" class="nav-link-home" data-i18n="nav-home">Gerçek Emre Özcan</a></li>
+                        <li><a href="about.html" class="nav-link-about" data-i18n="nav-about">Kariyer Yolculuğum</a>
+                        </li>
+                        <li><a href="hizmetler.html" class="nav-link-services" data-i18n="nav-services">Hizmetlerim</a>
+                        </li>
+                        <li><a href="nolto.html" class="nav-link-nolto" data-i18n="nav-nolto">Nolto Teknoloji</a></li>
+                        <li><a href="yazilar.html" class="nav-link-posts" data-i18n="nav-posts">Yazılarım</a></li>
+                        <li><a href="kitaplik.html" class="nav-link-library" data-i18n="nav-library">Kitaplığım</a></li>
                     </ul>
                 </nav>
+
+                <!-- Social Media Title -->
+                <h3 class="social-title" data-i18n="social-title">Sosyal Medya Hesaplarım</h3>
 
                 <!-- Social Links (Grid) -->
                 <div class="sidebar-social">
@@ -71,12 +86,11 @@
                             data-lucide="send"></i></a>
                 </div>
 
-                <!-- Direct Contact Footer -->
                 <div class="sidebar-footer mt-3">
-                    <a href="mailto:info@nolto.com.tr" class="control-btn"
+                    <a href="mailto:gm@nolto.com" class="control-btn"
                         style="width: 100%; justify-content: center; background: rgba(255,255,255,0.05);">
                         <i data-lucide="mail" style="width: 16px;"></i>
-                        <span>info@nolto.com.tr</span>
+                        <span>gm@nolto.com</span>
                     </a>
                 </div>
 
@@ -96,8 +110,8 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="content-wrapper about-page">
-                <h2 data-i18n="about-title">Profesyonel Yolculuğum</h2>
+            <div class="content-wrapper">
+                <h2 data-i18n="about-title">Kariyer Yolculuğum</h2>
 
                 <div class="journey-timeline mt-3">
                     <div class="timeline-item"
@@ -107,8 +121,8 @@
                         </div>
                         <h4 style="font-size: 1rem; color: var(--primary-color);">2016 - Günümüz</h4>
                         <h3 style="font-size: 1.25rem;">Nolto Teknoloji (Kurucu)</h3>
-                        <p data-i18n="about-intro-2">Küresel markaların Türkiye temsilciliği ve katma değerli
-                            distribütörlük.</p>
+                        <p data-i18n="about-intro-2">2016 yılında, bu birikimlerimi kendi değerlerimle harmanlayarak
+                            Nolto Teknoloji'yi hayata geçirdim.</p>
                     </div>
 
                     <div class="timeline-item"
@@ -117,26 +131,10 @@
                             style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--border-color);">
                         </div>
                         <h4 style="font-size: 1rem; opacity: 0.7;">2006 - 2016</h4>
-                        <h3 style="font-size: 1.25rem;">Bilişim & Telekomünikasyon</h3>
-                        <p data-i18n="about-intro-1">Sektörde çeşitli kademelerde uzmanlık ve yöneticilik deneyimi.</p>
+                        <h3 style="font-size: 1.25rem;">Bilişim & Telekomünikasyon Yöneticiliği</h3>
+                        <p data-i18n="about-intro-1">Sektördeki yolculuğuma, teknolojinin temellerini öğrenmeye duyduğum
+                            merakla başladım. Çeşitli global firmalarda görev alarak vizyonumu geliştirdim.</p>
                     </div>
-                </div>
-
-                <h3 style="margin-top: 1rem; margin-bottom: 1rem; font-size: 1.25rem;" data-i18n="brands">Temsil Edilen
-                    Markalar</h3>
-                <div class="brands-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
-                    <div
-                        style="background: var(--bg-gray); padding: 1rem; border-radius: 0.5rem; font-weight: 700; text-align: center;">
-                        Yeastar</div>
-                    <div
-                        style="background: var(--bg-gray); padding: 1rem; border-radius: 0.5rem; font-weight: 700; text-align: center;">
-                        Fanvil</div>
-                    <div
-                        style="background: var(--bg-gray); padding: 1rem; border-radius: 0.5rem; font-weight: 700; text-align: center;">
-                        Yealink</div>
-                    <div
-                        style="background: var(--bg-gray); padding: 1rem; border-radius: 0.5rem; font-weight: 700; text-align: center;">
-                        Gigaset</div>
                 </div>
             </div>
         </main>

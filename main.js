@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initLanguage();
     initAnimations();
+    setSidebarActive();
 });
 
 // --- Theme Management ---
@@ -45,42 +46,60 @@ function initTheme() {
 // --- Language Management (i18n) ---
 const translations = {
     tr: {
-        'nav-home': 'Ana Sayfa',
-        'nav-about': 'Yolculuğum',
-        'nav-solutions': 'Çözümler & Markalar',
-        'nav-media': 'Yazılar & Medya',
-        'theme-dark': 'Gece Modu',
-        'theme-light': 'Gündüz Modu',
-        'greeting': 'Vizyoner Liderlik & Teknoloji',
-        'intro-1': 'Bilişim ve telekomünikasyon sektörlerinde 20 yıla yaklaşan deneyimimle, teknolojik dönüşüme liderlik ediyorum.',
-        'intro-2': '2016 yılında kurduğum <strong>Nolto Teknoloji</strong> ile bugün küresel markaların Türkiye temsilciliğini üstlenerek katma değerli çözümler sunuyoruz.',
-        'expertise': 'Uzmanlık Alanları',
-        'about-title': 'Profesyonel Yolculuğum',
-        'about-intro-1': 'Sektördeki yolculuğum, teknolojinin iş dünyasını nasıl dönüştüreceğine dair bir merakla başladı.',
-        'about-intro-2': 'Bugün, Nolto Teknoloji çatısı altında dünya devlerini Türkiye pazarı ile buluşturuyoruz.',
-        'vision': 'Vizyonumuz',
-        'vision-text': 'Sadece ürün dağıtımı değil, mühendislik ve destek gücümüzle markaları pazar lideri konumuna taşımak.',
-        'brands': 'Temsil Edilen Markalar'
+        'nav-home': 'Gerçek Emre Özcan',
+        'nav-about': 'Kariyer Yolculuğum',
+        'nav-nolto': 'Nolto Teknoloji',
+        'nav-services': 'Hizmetlerim',
+        'social-title': 'Sosyal Medya Hesaplarım',
+        'services-title': 'Hizmetlerim',
+        'service-it-title': 'IT Danışmanlığı',
+        'service-it-desc': 'Kurumsal IT altyapıları, ağ sistemleri ve siber güvenlik konularında stratejik danışmanlık hizmetleri, BT süreçlerinin modernizasyonu ve dijital dönüşüm desteği.',
+        'service-telecom-title': 'Telekomünikasyon Eğitimi',
+        'service-telecom-desc': 'VoIP teknolojileri, IP Santral sistemleri (Yeastar, 3CX vb.) ve Tümleşik İletişim çözümleri üzerine bayi ve teknik personel için kapsamlı eğitim programları.',
     },
     en: {
-        'nav-home': 'Home',
-        'nav-about': 'My Journey',
-        'nav-solutions': 'Solutions & Brands',
-        'nav-media': 'Media & Posts',
+        'nav-home': 'Real Emre Özcan',
+        'nav-about': 'My Career Journey',
+        'nav-services': 'My Services',
+        'nav-nolto': 'Nolto Technology',
+        'nav-posts': 'My Posts',
+
+        'nav-library': 'My Library',
+        'social-title': 'My Social Media',
         'theme-dark': 'Dark Mode',
         'theme-light': 'Light Mode',
-        'greeting': 'Visionary Leadership & Tech',
-        'intro-1': 'With nearly 20 years of experience in IT and telecommunications, I lead technological transformation.',
-        'intro-2': 'Through <strong>Nolto Technology</strong>, founded in 2016, we provide value-added solutions as the Turkish representative of global brands.',
-        'expertise': 'Area of Expertise',
-        'about-title': 'Professional Journey',
-        'about-intro-1': 'My journey in the industry began with a curiosity about how technology would transform the business world.',
-        'about-intro-2': 'Today, we bring global giants to the Turkish market under the roof of Nolto Technology.',
-        'vision': 'Our Vision',
-        'vision-text': 'To move brands to market leadership with our engineering and support power, not just distribution.',
-        'brands': 'Represented Brands'
+        'services-title': 'My Services',
+        'service-it-title': 'IT Consultancy',
+        'service-it-desc': 'Strategic consultancy services on corporate IT infrastructures, network systems and cyber security, IT process modernization and digital transformation support.',
+        'service-telecom-title': 'Telecommunication Training',
+        'service-telecom-desc': 'Comprehensive training programs for resellers and technical staff on VoIP technologies, IP PBX systems (Yeastar, 3CX etc.) and Unified Communication solutions.',
+        'greeting': 'Hi, I am Emre Özcan',
+        'intro-1': 'I have nearly 20 years of experience in IT and telecommunications. During this time, I have had the chance to witness and contribute to the transformative power of technology. I am married, a father of one, and I can communicate at professional and social levels in English.',
+        'intro-2': 'In 2016, I founded <strong>Nolto Technology</strong> to bring my experiences together under a corporate roof. Today, along with my team, we strive to add value to the industry.',
+        'expertise-title': 'Focus Areas',
+        'exp-telecom': 'Telecommunications',
+        'exp-callcenter': 'Call Center Solutions',
+        'exp-it': 'IT Systems',
+        'about-title': 'My Career',
+        'about-intro-1': 'I started my journey with a curiosity for learning the foundations of technology. I grew my vision by working in various global companies.',
+        'about-intro-2': 'In 2016, I brought these experiences to life by founding Nolto Technology, blending them with my own values.',
+        'nolto-title': 'Nolto: An Entrepreneurial Story',
+        'nolto-text': 'My goal in founding Nolto Technology was to fill the gaps in the industry with an honest and engineering-oriented approach.',
     }
 };
+
+// --- Sidebar Active States ---
+function setSidebarActive() {
+    const path = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === path) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
 
 function initLanguage() {
     const langToggle = document.getElementById('lang-toggle');

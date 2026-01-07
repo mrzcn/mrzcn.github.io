@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="VoIP teknolojisinin geleceği üzerine bir inceleme. Emre Özcan'ın kişisel paylaşımları.">
-    <title>VoIP Teknolojisinin Geleceği - Emre Özcan</title>
+        content="Emre Özcan'ın teknoloji ve iş dünyası üzerine paylaştığı kişisel yazıları ve tecrübeleri.">
+    <meta name="author" content="Emre Özcan">
+    <title>Yazılarım - Emre Özcan</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +17,10 @@
     <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="VoIP Teknolojisinin Geleceği - Emre Özcan">
-    <meta property="og:description" content="VoIP teknolojisinin geleceği üzerine bir inceleme.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yazılarım - Emre Özcan">
+    <meta property="og:description"
+        content="Emre Özcan'ın teknoloji ve iş dünyası üzerine paylaştığı kişisel yazıları.">
     <meta property="og:image" content="https://mrzcn.github.io/profile.png">
 
     <!-- Stylesheet -->
@@ -35,12 +37,10 @@
                 <div class="profile-photo">
                     <img src="profile.png" alt="Emre Özcan" loading="eager">
                 </div>
-
                 <!-- Name -->
                 <h1 class="profile-name">Emre Özcan</h1>
                 <p class="profile-title">Nolto Teknoloji Kurucusu</p>
 
-                <!-- Navigation Menu -->
                 <nav class="sidebar-nav">
                     <ul>
                         <li><a href="index.html" class="nav-link-home" data-i18n="nav-home">Gerçek Emre Özcan</a></li>
@@ -49,7 +49,8 @@
                         <li><a href="hizmetler.html" class="nav-link-services" data-i18n="nav-services">Hizmetlerim</a>
                         </li>
                         <li><a href="nolto.html" class="nav-link-nolto" data-i18n="nav-nolto">Nolto Teknoloji</a></li>
-                        <li><a href="yazilar.html" class="nav-link-posts" data-i18n="nav-posts">Yazılarım</a></li>
+                        <li><a href="yazilar.html" class="active nav-link-posts" data-i18n="nav-posts">Yazılarım</a>
+                        </li>
                         <li><a href="kitaplik.html" class="nav-link-library" data-i18n="nav-library">Kitaplığım</a></li>
                     </ul>
                 </nav>
@@ -104,43 +105,22 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="content-wrapper about-page">
-                <a href="yazilar.html"
-                    style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-light); font-size: 0.875rem;">
-                    <i data-lucide="arrow-left" style="width: 14px;"></i> Yazılarıma Dön
-                </a>
-
-                <h2>VoIP Teknolojisinin Geleceği</h2>
-                <p class="intro-text" style="font-size: 0.875rem; opacity: 0.7; margin-bottom: 2rem;">
-                    📅 4 Ocak 2026 • ⏱️ 5 dakika okuma
+            <div class="content-wrapper">
+                <h2 data-i18n="nav-posts">Yazılarım</h2>
+                <p class="intro-text">
+                    Tecrübe paylaştıkça çoğalır. Bilişim ve telekomünikasyon dünyasındaki küçük gözlemlerimi ve
+                    öğrendiklerimi burada bir araya getirmeye çalışıyorum.
                 </p>
 
-                <div class="card-content" style="line-height: 1.8;">
-                    <p>
-                        Voice over Internet Protocol (VoIP) teknolojisi, son yıllarda iş dünyasında iletişim şeklini
-                        kökten değiştirdi. Geleneksel telefon hatlarından IP tabanlı iletişime geçiş, sadece maliyet
-                        tasarrufu sağlamakla kalmadı, aynı zamanda işletmelere esneklik ve ölçeklenebilirlik de
-                        kazandırdı.
-                    </p>
-
-                    <h3 class="mt-4">Gelecek Trendleri</h3>
-                    <p>
-                        Yapay zeka (AI) ve makine öğrenimi, VoIP sistemlerinin en heyecan verici gelişme alanlarından
-                        biri. Akıllı çağrı yönlendirme, otomatik transkripsiyon ve gerçek zamanlı çeviri özellikleri, iş
-                        iletişimini yeni bir seviyeye taşıyor.
-                    </p>
-
-                    <p class="mt-3">
-                        5G teknolojisinin yaygınlaşması, VoIP çağrılarının kalitesini önemli ölçüde artıracak. Daha
-                        düşük gecikme süreleri ve daha yüksek bant genişliği, kristal netliğinde sesli ve görüntülü
-                        görüşmeler anlamına geliyor.
-                    </p>
-
-                    <p class="mt-4"
-                        style="padding: 1.5rem; background: var(--bg-gray); border-radius: 1rem; font-style: italic;">
-                        "Sektördeki 20 yıllık tecrübemle söyleyebilirim ki; teknoloji ne kadar gelişirse gelişsin,
-                        değişmeyen tek şey dürüst ve güvenilir iletişim ihtiyacıdır."
-                    </p>
+                <div class="posts-grid mt-4" style="display: grid; gap: 1.5rem;">
+                    <a href="voip-teknolojisinin-gelecegi.html" class="post-card"
+                        style="display: block; background: var(--bg-gray); padding: 1.5rem; border-radius: 1.25rem; color: inherit;">
+                        <h3 style="color: var(--primary-color);">VoIP Teknolojisinin Geleceği</h3>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem; opacity: 0.8;">Teknolojinin evrimi ve sesli
+                            iletişimin geleceği üzerine bir inceleme.</p>
+                        <span style="font-size: 0.75rem; opacity: 0.6; display: block; margin-top: 1rem;">4 Ocak 2026 •
+                            5 dk okuma</span>
+                    </a>
                 </div>
             </div>
         </main>

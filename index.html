@@ -16,10 +16,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrzcn.github.io/">
+  <meta property="og:title" content="Emre Özcan - Ana Sayfa">
+  <meta property="og:description" content="Emre Özcan - Nolto Teknoloji kurucusu, bilişim ve telekomünikasyon uzmanı.">
+  <meta property="og:image" content="https://mrzcn.github.io/profile.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mrzcn.github.io/">
+  <meta property="twitter:title" content="Emre Özcan - Ana Sayfa">
+  <meta property="twitter:description"
+    content="Emre Özcan - Nolto Teknoloji kurucusu, bilişim ve telekomünikasyon uzmanı.">
+  <meta property="twitter:image" content="https://mrzcn.github.io/profile.png">
+
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <link rel="stylesheet" href="style.css?v=1.4">
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/lucide.min.js"></script>
 </head>
 
 <body>
@@ -40,12 +57,17 @@
         <!-- Navigation Menu -->
         <nav class="sidebar-nav">
           <ul>
-            <li><a href="index.html" class="active" data-i18n="nav-home">Ana Sayfa</a></li>
-            <li><a href="about.html" data-i18n="nav-about">Yolculuğum</a></li>
-            <li><a href="#" data-i18n="nav-solutions">Çözümler & Markalar</a></li>
-            <li><a href="#" data-i18n="nav-media">Yazılar & Medya</a></li>
+            <li><a href="index.html" class="nav-link-home" data-i18n="nav-home">Gerçek Emre Özcan</a></li>
+            <li><a href="about.html" class="nav-link-about" data-i18n="nav-about">Kariyer Yolculuğum</a></li>
+            <li><a href="hizmetler.html" class="nav-link-services" data-i18n="nav-services">Hizmetlerim</a></li>
+            <li><a href="nolto.html" class="nav-link-nolto" data-i18n="nav-nolto">Nolto Teknoloji</a></li>
+            <li><a href="yazilar.html" class="nav-link-posts" data-i18n="nav-posts">Yazılarım</a></li>
+            <li><a href="kitaplik.html" class="nav-link-library" data-i18n="nav-library">Kitaplığım</a></li>
           </ul>
         </nav>
+
+        <!-- Social Media Title -->
+        <h3 class="social-title" data-i18n="social-title">Sosyal Medya Hesaplarım</h3>
 
         <!-- Social Links (Grid) -->
         <div class="sidebar-social">
@@ -71,12 +93,11 @@
               data-lucide="send"></i></a>
         </div>
 
-        <!-- Direct Contact Footer -->
         <div class="sidebar-footer mt-3">
-          <a href="mailto:info@nolto.com.tr" class="control-btn"
+          <a href="mailto:gm@nolto.com" class="control-btn"
             style="width: 100%; justify-content: center; background: rgba(255,255,255,0.05);">
             <i data-lucide="mail" style="width: 16px;"></i>
-            <span>info@nolto.com.tr</span>
+            <span>gm@nolto.com</span>
           </a>
         </div>
 
@@ -97,30 +118,36 @@
     <!-- Main Content -->
     <main class="main-content">
       <div class="content-wrapper">
-        <h2 data-i18n="greeting">Vizyoner Liderlik & Teknoloji</h2>
-        <p class="intro-text" data-i18n="intro-1">
-          Bilişim ve telekomünikasyon sektörlerinde 20 yıla yaklaşan deneyimimle, teknolojik dönüşüme liderlik ediyorum.
-        </p>
-        <p class="intro-text" data-i18n="intro-2">
-          2016 yılında kurduğum <strong>Nolto Teknoloji</strong> ile bugün küresel markaların Türkiye temsilciliğini
-          üstlenerek katma değerli çözümler sunuyoruz.
-        </p>
+        <section class="home-page">
+          <!-- Disclaimer Alert -->
+          <div
+            style="background-color: #fee2e2; color: #991b1b; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem; border: 1px solid #fca5a5;">
+            <strong>Önemli Duyuru:</strong> Gerçek Emre Özcan benim. Lütfen kendisini internette Emre Özcan olarak
+            tanıtanlara itibar etmeyin.
+          </div>
 
-        <div class="hero-stats mt-4"
-          style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
-          <div class="stat-card" style="background: var(--bg-gray); padding: 1rem; border-radius: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">20+</div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.7;">Yıl Deneyim</div>
+          <h2 data-i18n="home-title">Gerçek Emre Özcan</h2>
+          <p class="intro-text" data-i18n="intro-1">
+            Bilişim ve telekomünikasyon sektörlerinde 20 yıla yaklaşan bir deneyime sahibim. Bu süre zarfında
+            teknolojinin
+            dönüştürücü gücüne tanıklık etme ve bu sürece katkı sağlama fırsatım oldu. Evli ve bir çocuk babasıyım, iyi
+            derecede İngilizce biliyorum.
+          </p>
+          <p class="intro-text" data-i18n="intro-2">
+            2016 yılında, edindiğim tecrübeleri kurumsal bir çatı altında birleştirmek amacıyla <strong>Nolto
+              Teknoloji</strong>'yi kurdum. Bugün ekibimle birlikte sektörde değer katan çalışmalar yapmaya gayret
+            ediyoruz.
+          </p>
+
+          <div class="skills-mini mt-4">
+            <h3 style="font-size: 1rem; margin-bottom: 1rem;" data-i18n="expertise-title">Çalışma Alanlarım</h3>
+            <div class="skills-compact">
+              <span data-i18n="exp-telecom">Telekomünikasyon</span>
+              <span data-i18n="exp-callcenter">Çağrı Merkezi Çözümleri</span>
+              <span data-i18n="exp-it">Bilişim Sistemleri</span>
+            </div>
           </div>
-          <div class="stat-card" style="background: var(--bg-gray); padding: 1rem; border-radius: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">4</div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.7;">Küresel Marka</div>
-          </div>
-          <div class="stat-card" style="background: var(--bg-gray); padding: 1rem; border-radius: 1rem;">
-            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">100+</div>
-            <div style="font-size: 0.75rem; text-transform: uppercase; opacity: 0.7;">İş Ortağı</div>
-          </div>
-        </div>
+        </section>
       </div>
     </main>
   </div>
