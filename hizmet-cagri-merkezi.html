@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sayfa bulunamadı - Emre Özcan">
-    <meta name="robots" content="noindex, nofollow">
-    <title>404 - Sayfa Bulunamadı | Emre Özcan</title>
+    <meta name="description"
+        content="KOBİ'ler için uygun maliyetli, profesyonel çağrı merkezi altyapı kurulumu ve yönetimi. Emre Özcan ile müşteri deneyimini iyileştirin.">
+    <title>Çağrı Merkezi Çözümleri - Emre Özcan</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,66 +15,19 @@
 
     <link rel="icon" href="favicon.png" type="image/png">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Çağrı Merkezi Çözümleri - Emre Özcan">
+    <meta property="og:description" content="KOBİ'ler için profesyonel çağrı merkezi altyapı kurulumu ve yönetimi.">
+    <meta property="og:image" content="https://mrzcn.github.io/profile.png">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css?v=1.4">
     <!-- Lucide Icons -->
     <script src="lucide.min.js"></script>
-
-    <style>
-        .error-page {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            min-height: 100%;
-            padding: 2rem;
-        }
-
-        .error-code {
-            font-size: 8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            line-height: 1;
-            margin-bottom: 1rem;
-            opacity: 0.8;
-        }
-
-        .error-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-
-        .error-description {
-            font-size: 1rem;
-            color: var(--text-medium);
-            margin-bottom: 2rem;
-            max-width: 400px;
-        }
-
-        .back-home {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.75rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .back-home:hover {
-            background: var(--primary-hover);
-            color: white;
-            transform: translateY(-2px);
-        }
-    </style>
 </head>
 
 <body>
-
     <div class="app-container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -87,13 +40,20 @@
                 <div class="profile-name">Emre Özcan</div>
                 <p class="profile-title">Nolto Teknoloji Kurucusu</p>
 
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat">
+                    <i data-lucide="menu"></i>
+                    <span data-i18n="menu-toggle">Menü</span>
+                </button>
+
                 <!-- Navigation Menu -->
                 <nav class="sidebar-nav">
                     <ul>
                         <li><a href="index.html" class="nav-link-home" data-i18n="nav-home">Gerçek Emre Özcan</a></li>
                         <li><a href="about.html" class="nav-link-about" data-i18n="nav-about">Kariyer Yolculuğum</a>
                         </li>
-                        <li><a href="hizmetler.html" class="nav-link-services" data-i18n="nav-services">Hizmetlerim</a>
+                        <li><a href="hizmetler.html" class="nav-link-services active"
+                                data-i18n="nav-services">Hizmetlerim</a>
                         </li>
                         <li><a href="nolto.html" class="nav-link-nolto" data-i18n="nav-nolto">Nolto Teknoloji</a></li>
                         <li><a href="yazilar.html" class="nav-link-posts" data-i18n="nav-posts">Yazılarım</a></li>
@@ -151,17 +111,20 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="error-page">
-                <div class="error-code">404</div>
-                <h1 class="error-title" data-i18n="error-title">Sayfa Bulunamadı</h1>
-                <p class="error-description" data-i18n="error-desc">
-                    Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. Ana sayfaya dönerek devam
-                    edebilirsiniz.
-                </p>
-                <a href="index.html" class="back-home">
-                    <i data-lucide="home" style="width: 18px;"></i>
-                    <span data-i18n="error-back">Ana Sayfaya Dön</span>
+            <div class="content-wrapper about-page">
+                <a href="hizmetler.html"
+                    style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-light); font-size: 0.875rem;">
+                    <i data-lucide="arrow-left" style="width: 14px;"></i> <span
+                        data-i18n="back-to-services">Hizmetlerime Dön</span>
                 </a>
+
+                <h1 data-i18n="service-callcenter-detail-title">Çağrı Merkezi Çözümleri</h1>
+
+                <div class="card-content" style="line-height: 1.8;">
+                    <p data-i18n="service-callcenter-detail-desc">
+                        KOBİ'ler için uygun maliyetli, profesyonel çağrı merkezi altyapı kurulumu ve yönetimi.
+                    </p>
+                </div>
             </div>
         </main>
     </div>
