@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Emre Özcan hakkında - Nolto Teknoloji kurucusu, bilişim ve telekomünikasyon uzmanı. 20 yıllık sektör deneyimi.">
-    <meta name="keywords" content="Emre Özcan, Nolto Teknoloji, VoIP, IP PBX, telekomünikasyon, kariyer">
-    <meta name="author" content="Emre Özcan">
-
-    <title>Hakkımda - Emre Özcan</title>
+    <meta name="description" content="Sayfa bulunamadı - Emre Özcan">
+    <title>404 - Sayfa Bulunamadı | Emre Özcan</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,17 +14,62 @@
 
     <link rel="icon" href="favicon.png" type="image/png">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hakkımda - Emre Özcan">
-    <meta property="og:description"
-        content="Emre Özcan hakkında - Nolto Teknoloji kurucusu, bilişim ve telekomünikasyon uzmanı.">
-    <meta property="og:image" content="https://mrzcn.github.io/profile.png">
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css?v=1.4">
     <!-- Lucide Icons -->
     <script src="lucide.min.js"></script>
+
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100%;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .error-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .error-description {
+            font-size: 1rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            max-width: 400px;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: var(--primary-hover);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 
 <body>
@@ -94,7 +135,6 @@
                     </a>
                 </div>
 
-                <!-- Theme & Language Controls -->
                 <div class="sidebar-controls">
                     <button id="theme-toggle" class="control-btn" aria-label="Tema Değiştir">
                         <span class="icon">🌙</span>
@@ -110,34 +150,17 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div class="content-wrapper">
-                <h2 data-i18n="about-title">Kariyer Yolculuğum</h2>
-
-                <div class="journey-timeline mt-3">
-                    <div class="timeline-item"
-                        style="border-left: 2px solid var(--primary-color); padding-left: 1.5rem; position: relative; margin-bottom: 2rem;">
-                        <div
-                            style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--primary-color);">
-                        </div>
-                        <h4 style="font-size: 1rem; color: var(--primary-color);" data-i18n="about-timeline-current">
-                            2016 - Günümüz</h4>
-                        <h3 style="font-size: 1.25rem;" data-i18n="about-current-role">Nolto Teknoloji (Kurucu)</h3>
-                        <p data-i18n="about-intro-2">2016 yılında, bu birikimlerimi kendi değerlerimle harmanlayarak
-                            Nolto Teknoloji'yi hayata geçirdim.</p>
-                    </div>
-
-                    <div class="timeline-item"
-                        style="border-left: 2px solid var(--border-color); padding-left: 1.5rem; position: relative; margin-bottom: 2rem;">
-                        <div
-                            style="position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--border-color);">
-                        </div>
-                        <h4 style="font-size: 1rem; opacity: 0.7;" data-i18n="about-timeline-past">2006 - 2016</h4>
-                        <h3 style="font-size: 1.25rem;" data-i18n="about-past-role">Bilişim & Telekomünikasyon
-                            Yöneticiliği</h3>
-                        <p data-i18n="about-intro-1">Sektördeki yolculuğuma, teknolojinin temellerini öğrenmeye duyduğum
-                            merakla başladım. Çeşitli global firmalarda görev alarak vizyonumu geliştirdim.</p>
-                    </div>
-                </div>
+            <div class="error-page">
+                <div class="error-code">404</div>
+                <h1 class="error-title" data-i18n="error-title">Sayfa Bulunamadı</h1>
+                <p class="error-description" data-i18n="error-desc">
+                    Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. Ana sayfaya dönerek devam
+                    edebilirsiniz.
+                </p>
+                <a href="index.html" class="back-home">
+                    <i data-lucide="home" style="width: 18px;"></i>
+                    <span data-i18n="error-back">Ana Sayfaya Dön</span>
+                </a>
             </div>
         </main>
     </div>

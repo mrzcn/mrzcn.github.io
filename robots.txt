@@ -1,0 +1,7 @@
+# https://mrzcn.github.io - Emre Özcan Personal Website
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mrzcn.github.io/sitemap.xml
