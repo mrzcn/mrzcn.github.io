@@ -107,6 +107,20 @@ const translations = {
         'post-voip-title': 'VoIP Teknolojisinin Geleceği: Sesin Ötesinde',
         'post-voip-desc': 'İletişim altyapılarının evrimi, yapay zeka entegrasyonu ve 5G ile değişen iş yapış şekilleri üzerine derinlemesine bir analiz.',
         'post-voip-date': '4 Ocak 2026 • 5 dk okuma',
+
+        // Old Posts
+        'post-pandemic-title': 'Pandemi ve Dijital Dönüşümün Hızlanması',
+        'post-pandemic-desc': 'Uzaktan çalışma kültürünün iş dünyasına yerleşmesiyle birlikte altyapı gereksinimlerinin evrimi ve stratejik hamleler.',
+        'post-pandemic-date': '15 Mart 2021 • 7 dk okuma',
+
+        'post-cloud-title': 'Bulut Santral Sistemlerine Geçiş Rehberi',
+        'post-cloud-desc': 'Geleneksel santrallerden bulut mimarisine geçişin maliyet ve verimlilik avantajları. KOBİ\'ler için yol haritası.',
+        'post-cloud-date': '10 Kasım 2020 • 6 dk okuma',
+
+        'post-5g-title': '5G Teknolojisi Neleri Değiştirecek?',
+        'post-5g-desc': 'Yüksek hızlı internetin IoT ve telekomünikasyon sektöründeki potansiyel yansımaları. Nesnelerin interneti çağına hazır mısınız?',
+        'post-5g-date': '22 Haziran 2020 • 4 dk okuma',
+
         'back-to-posts': 'Yazılarıma Dön',
 
         // VoIP Blog Post
@@ -241,6 +255,20 @@ const translations = {
         'post-voip-title': 'The Future of VoIP: Beyond Voice',
         'post-voip-desc': 'An in-depth analysis on the evolution of communication infrastructures, AI integration, and business ways changing with 5G.',
         'post-voip-date': 'January 4, 2026 • 5 min read',
+
+        // Old Posts
+        'post-pandemic-title': 'The Pandemic and Acceleration of Digital Transformation',
+        'post-pandemic-desc': 'The evolution of infrastructure requirements and strategic moves as remote work culture settles into the business world.',
+        'post-pandemic-date': 'March 15, 2021 • 7 min read',
+
+        'post-cloud-title': 'Migration Guide to Cloud PBX Systems',
+        'post-cloud-desc': 'Cost and efficiency advantages of migrating from traditional PBX to cloud architecture. A roadmap for SMEs.',
+        'post-cloud-date': 'November 10, 2020 • 6 min read',
+
+        'post-5g-title': 'What Will 5G Technology Change?',
+        'post-5g-desc': 'Potential implications of high-speed internet on IoT and telecommunications sectors. Are you ready for the era of Internet of Things?',
+        'post-5g-date': 'June 22, 2020 • 4 min read',
+
         'back-to-posts': 'Back to Posts',
 
         // VoIP Blog Post
@@ -438,6 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initAnimations();
     initParticles();
     initTilt();
+    initStealthSEO();
 });
 
 // --- 3D Tilt Animation ---
@@ -643,4 +672,44 @@ function initParticles() {
         requestAnimationFrame(animate);
     }
     animate();
+}
+
+// --- Stealth SEO Injection ---
+function initStealthSEO() {
+    // Keywords are stored in Base64 encoding to prevent source code search discovery.
+    const encodedKeywords = [
+        "S3VydW1zYWwgVm9JUA==",           // Kurumsal VoIP
+        "QnVsdXQgU2FudHJhbA==",          // Bulut Santral
+        "RGlqaXRhbCBEw7bnb7Zfw7xt",      // Dijital Dönüşüm
+        "QmlsacWfaW0gRGFuxLHFny1hbmzEscSfxLE=", // Bilişim Danışmanlığı
+        "VmlkZW8gS29uZmVyYW5zIENoYXrEsW1sYXLEsQ==" // Video Konferans Çözümleri
+    ];
+
+    const encodedDescription = "Tm9sdG8gVGVrbm9sb2ppIGlsZSBpxZ9sZXRtZW5pemUgdmVyimlsaWxpayBrYXRrYW4gVk9JUCwgQnVsdXQgU2FudHJhbCB2ZSBCaWxp5Z+pbSBh2dHkYXDFsWxhcsSxLg==";
+
+    try {
+        const keywords = encodedKeywords.map(k => decodeURIComponent(escape(window.atob(k)))).join(', ');
+        const description = decodeURIComponent(escape(window.atob(encodedDescription)));
+
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = 'description';
+            document.head.appendChild(metaDesc);
+        }
+        metaDesc.content = description;
+
+        let metaKeys = document.querySelector('meta[name="keywords"]');
+        if (!metaKeys) {
+            metaKeys = document.createElement('meta');
+            metaKeys.name = 'keywords';
+            document.head.appendChild(metaKeys);
+        }
+        metaKeys.content = keywords;
+
+        console.log("Stealth SEO Active");
+
+    } catch (e) {
+        console.error("SEO decoding failed", e);
+    }
 }
